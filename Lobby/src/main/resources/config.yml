@@ -1,0 +1,4 @@
+lobby-server: Lobby
+
+messages:
+  in-lobby: You're already in the lobby server!

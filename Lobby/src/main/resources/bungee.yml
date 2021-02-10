@@ -1,0 +1,5 @@
+name: Lobby
+version: ${project.version}
+main: org.survivaldevelopment.lobby.Lobby
+description: /lobby command for a BungeeCord network
+author: ItzLightyHD & SurvivalDevelopment
