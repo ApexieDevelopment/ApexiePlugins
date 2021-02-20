@@ -1,0 +1,5 @@
+lobby-server: Lobby
+
+messages:
+  in-lobby: §cYou're already in the lobby server!
+  players-only: §cOnly players can execute this command!
