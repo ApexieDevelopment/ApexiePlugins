@@ -1,5 +1,11 @@
-lobby-server: Lobby
+lobby-server: "Lobby"
+
+# Placeholders you can use:
+# - %alert.message% => Get the message wrote in the command
+alert-format: "§d[Alert] %alert.message%"
 
 messages:
-  in-lobby: §cYou're already in the lobby server!
-  players-only: §cOnly players can execute this command!
+  in-lobby: "§cYou're already in the lobby server!"
+  players-only: "§cOnly players can execute this command!"
+  # Use the placeholder %alert.usage% to get the usage of the command
+  alertUsage: "Usage: %alert.usage%"

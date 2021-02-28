@@ -1,5 +1,8 @@
 package org.apexie.lobbype;
 
+import com.nukkitx.protocol.bedrock.data.command.CommandData;
+import com.nukkitx.protocol.bedrock.data.command.CommandParamData;
+import com.nukkitx.protocol.bedrock.data.command.CommandParamType;
 import dev.waterdog.ProxyServer;
 import dev.waterdog.command.Command;
 import dev.waterdog.command.CommandSender;
@@ -7,6 +10,8 @@ import dev.waterdog.command.CommandSettings;
 import dev.waterdog.network.ServerInfo;
 import dev.waterdog.player.ProxiedPlayer;
 import dev.waterdog.utils.Configuration;
+
+import java.util.Collections;
 
 public class LobbyCommand extends Command {
 
@@ -36,5 +41,12 @@ public class LobbyCommand extends Command {
         ServerInfo target = ProxyServer.getInstance().getServerInfo(lobby);
         player.connect(target);
         return true;
+    }
+
+    @Override
+    public CommandData craftNetwork() {
+        CommandParamData[][] parameterData = new CommandParamData[][]{{
+        }};
+        return new CommandData(this.getName(), this.getDescription(), Collections.emptyList(), (byte) 0, null, parameterData);
     }
 }
